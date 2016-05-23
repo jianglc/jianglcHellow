@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+           id="com.esquel.CordovaHelloword"
+      version="1.0.0">
+    <name>cordovaHelloword</name>
+    <description>Alter for Cordova</description>
+    <license>MIT</license>
+    <keywords>cordova,cordovaHelloword</keywords>
+
+    <js-module src="www/cordovaHelloword.js" name="cordovaHelloword">
+        <clobbers target="cordovaHelloword" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="cordovaHelloword" >
+                <param name="android-package" value="com.esquel.cordovaHelloword.cordovaHelloword"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/cordovaHelloword.java" target-dir="src/com/esquel/cordovaHelloword" />
+    </platform>
+</plugin>
